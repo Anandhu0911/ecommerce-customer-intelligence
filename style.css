@@ -1,0 +1,103 @@
+/* ============================================
+   Dark Theme — E-Commerce Analytics Dashboard
+   ============================================ */
+
+:root {
+    --bg-main: #0E1117;
+    --bg-panel: #1A1D24;
+    --bg-card: #1E2229;
+    --accent: #FF6F61;
+    --accent-soft: #FF6F6133;
+    --text-main: #FAFAFA;
+    --text-muted: #A0A4AB;
+    --border: #2A2E37;
+}
+
+/* App background */
+.stApp {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+}
+
+/* Sidebar */
+section[data-testid="stSidebar"] {
+    background-color: var(--bg-panel);
+    border-right: 1px solid var(--border);
+}
+section[data-testid="stSidebar"] .stRadio label {
+    color: var(--text-main) !important;
+}
+
+/* Headings */
+h1, h2, h3, h4 {
+    color: var(--text-main) !important;
+    font-weight: 700;
+}
+h1 {
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 0.4rem;
+}
+
+/* Metric cards */
+div[data-testid="stMetric"] {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1rem 1.2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+div[data-testid="stMetricLabel"] {
+    color: var(--text-muted) !important;
+}
+div[data-testid="stMetricValue"] {
+    color: var(--accent) !important;
+}
+
+/* Buttons */
+.stButton > button {
+    background-color: var(--accent);
+    color: #0E1117;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    padding: 0.5rem 1.4rem;
+    transition: all 0.2s ease-in-out;
+}
+.stButton > button:hover {
+    background-color: #ff8577;
+    box-shadow: 0 0 10px var(--accent-soft);
+    color: #0E1117;
+}
+
+/* Selectbox / inputs */
+div[data-baseweb="select"] > div,
+input, textarea {
+    background-color: var(--bg-card) !important;
+    color: var(--text-main) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 8px !important;
+}
+
+/* Dataframes / tables */
+div[data-testid="stDataFrame"] {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Success / error boxes */
+div[data-testid="stAlert"] {
+    border-radius: 10px;
+    border: 1px solid var(--border);
+}
+
+/* Markdown text */
+.stMarkdown, .stMarkdown p, .stMarkdown li {
+    color: var(--text-main);
+}
+
+/* Sidebar title */
+.stSidebar .stTitle, section[data-testid="stSidebar"] h1 {
+    color: var(--accent) !important;
+}
